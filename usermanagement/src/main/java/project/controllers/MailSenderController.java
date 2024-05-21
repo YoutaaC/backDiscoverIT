@@ -32,8 +32,8 @@ public class MailSenderController {
     }
 
     @PostMapping("/send")
-    public String sendMail(@RequestParam(value = "file", required = false) MultipartFile[] file, String to, String[] cc, String subject, String body) {
-        return emailService.sendMail(file, to, cc, subject, body);
+    public String sendMail(@RequestParam String to, String subject, String body) {
+        return emailService.sendMail( to, subject, body);
     }
 
 
