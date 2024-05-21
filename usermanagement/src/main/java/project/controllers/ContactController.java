@@ -39,7 +39,6 @@ public class ContactController {
     public ContactEntity getContactById(@PathVariable Long contactid)
     {
         return contactServiceInter.getContactById(contactid);
-
     }
 
 }
