@@ -38,16 +38,6 @@ public class MailSenderController {
 
 
 
-//    @PostMapping("/addEvent")
-//    public String addEventToCalendar(@RequestParam String title,
-//                                     @RequestParam String description,
-//                                     @RequestParam String startDateTime,
-//                                     @RequestParam String endDateTime) throws IOException, GeneralSecurityException {
-//        Event createdEvent = googleCalendarService.createEvent(title, description, startDateTime, endDateTime);
-//        return "Event created successfully: " + createdEvent.getId();
-//    }
-
-
 
 
 

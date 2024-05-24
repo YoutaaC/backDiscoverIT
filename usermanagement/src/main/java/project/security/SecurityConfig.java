@@ -48,6 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/mail/**").hasAnyAuthority(UserRoleName.USER.name(),UserRoleName.ADMIN.name())
                 .antMatchers("/events/**").hasAnyAuthority(UserRoleName.USER.name(),UserRoleName.ADMIN.name())
                 .antMatchers("/users/**").hasAnyAuthority(UserRoleName.USER.name(),UserRoleName.ADMIN.name())
+                .antMatchers("/categories/**").hasAnyAuthority(UserRoleName.USER.name(),UserRoleName.ADMIN.name())
 //                .antMatchers("/visiteurs/**").permitAll()
                 .antMatchers("/Contactus/**").permitAll()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
