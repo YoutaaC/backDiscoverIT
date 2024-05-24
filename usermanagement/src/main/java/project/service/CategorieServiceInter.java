@@ -10,4 +10,9 @@ public interface CategorieServiceInter {
     List<CategorieEntity> getAllCategories();
 
     void deleteCategorie(Long id);
+
+    CategorieEntity updateCategorie(Long id, CategorieEntity categorie);
+
+
+    CategorieEntity getCategorieById(Long categorieid);
 }

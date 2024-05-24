@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import project.models.CategorieEntity;
 import project.models.ContactEntity;
+import project.models.EventEntity;
+import project.models.PostEntity;
 import project.service.CategorieServiceInter;
 
 import java.util.List;
@@ -33,5 +35,19 @@ public class CategorieController {
     {
 
         categorieServiceInter.deleteCategorie(id);
+    }
+
+    @PutMapping(value = "/update/{id}")
+    public CategorieEntity updateCategorie(@PathVariable Long id , @RequestBody CategorieEntity categorie)
+    {
+        return categorieServiceInter.updateCategorie(id,categorie);
+
+    }
+
+    @GetMapping(value = "/getCategorieById/{categorieid}")
+    public CategorieEntity getCategorieById(@PathVariable Long categorieId)
+    {
+        return categorieServiceInter.getCategorieById(categorieId);
+
     }
 }
